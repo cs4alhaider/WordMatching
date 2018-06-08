@@ -12,6 +12,9 @@
 		E8AE8DFC20CB189E00BF164B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8AE8DFA20CB189E00BF164B /* Main.storyboard */; };
 		E8AE8DFE20CB189F00BF164B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8AE8DFD20CB189F00BF164B /* Assets.xcassets */; };
 		E8AE8E0120CB189F00BF164B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8AE8DFF20CB189F00BF164B /* LaunchScreen.storyboard */; };
+		E8AE8E0A20CB1E3300BF164B /* text1.txt in Resources */ = {isa = PBXBuildFile; fileRef = E8AE8E0820CB1E3200BF164B /* text1.txt */; };
+		E8AE8E0B20CB1E3300BF164B /* text2.txt in Resources */ = {isa = PBXBuildFile; fileRef = E8AE8E0920CB1E3200BF164B /* text2.txt */; };
+		E8AE8E0D20CB1F5000BF164B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE8E0C20CB1F5000BF164B /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		E8AE8DFD20CB189F00BF164B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8AE8E0020CB189F00BF164B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8AE8E0220CB189F00BF164B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8AE8E0820CB1E3200BF164B /* text1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text1.txt; sourceTree = "<group>"; };
+		E8AE8E0920CB1E3200BF164B /* text2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text2.txt; sourceTree = "<group>"; };
+		E8AE8E0C20CB1F5000BF164B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +60,15 @@
 		E8AE8DF520CB189E00BF164B /* WordMatching */ = {
 			isa = PBXGroup;
 			children = (
+				E8AE8E0820CB1E3200BF164B /* text1.txt */,
+				E8AE8E0920CB1E3200BF164B /* text2.txt */,
 				E8AE8DF620CB189E00BF164B /* AppDelegate.swift */,
 				E8AE8DF820CB189E00BF164B /* ViewController.swift */,
 				E8AE8DFA20CB189E00BF164B /* Main.storyboard */,
 				E8AE8DFD20CB189F00BF164B /* Assets.xcassets */,
 				E8AE8DFF20CB189F00BF164B /* LaunchScreen.storyboard */,
 				E8AE8E0220CB189F00BF164B /* Info.plist */,
+				E8AE8E0C20CB1F5000BF164B /* Extensions.swift */,
 			);
 			path = WordMatching;
 			sourceTree = "<group>";
@@ -123,7 +132,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8AE8E0120CB189F00BF164B /* LaunchScreen.storyboard in Resources */,
+				E8AE8E0A20CB1E3300BF164B /* text1.txt in Resources */,
 				E8AE8DFE20CB189F00BF164B /* Assets.xcassets in Resources */,
+				E8AE8E0B20CB1E3300BF164B /* text2.txt in Resources */,
 				E8AE8DFC20CB189E00BF164B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8AE8DF920CB189E00BF164B /* ViewController.swift in Sources */,
+				E8AE8E0D20CB1F5000BF164B /* Extensions.swift in Sources */,
 				E8AE8DF720CB189E00BF164B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +295,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G69L3HCQBT;
 				INFOPLIST_FILE = WordMatching/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -290,7 +303,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.alhaider.WordMatching;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -301,6 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G69L3HCQBT;
 				INFOPLIST_FILE = WordMatching/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.alhaider.WordMatching;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
