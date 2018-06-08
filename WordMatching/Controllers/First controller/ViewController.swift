@@ -9,6 +9,9 @@
 import UIKit
 import MessageUI
 
+
+var sharedFilePath: String?
+
 class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     
@@ -73,6 +76,9 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     //MARK: setup
     fileprivate func setup(){
+        
+        self.title = "Word Matching"
+        
         label1.text = "First file text is:"
         subLabel1.text = readFileFromThisProj(fileName: "text1", ofType: "txt")
         
@@ -151,6 +157,14 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
+    
+    
+    fileprivate func openingTheFile(fileURL:String){
+        
+        
+        
+    }
+    
     
     
     
