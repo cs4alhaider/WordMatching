@@ -14,13 +14,16 @@
 		E8AE8E0120CB189F00BF164B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8AE8DFF20CB189F00BF164B /* LaunchScreen.storyboard */; };
 		E8AE8E0A20CB1E3300BF164B /* text1.txt in Resources */ = {isa = PBXBuildFile; fileRef = E8AE8E0820CB1E3200BF164B /* text1.txt */; };
 		E8AE8E0B20CB1E3300BF164B /* text2.txt in Resources */ = {isa = PBXBuildFile; fileRef = E8AE8E0920CB1E3200BF164B /* text2.txt */; };
-		E8AE8E0D20CB1F5000BF164B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE8E0C20CB1F5000BF164B /* Extensions.swift */; };
 		E8AE8E0F20CB2C5E00BF164B /* FileBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE8E0E20CB2C5E00BF164B /* FileBrowserViewController.swift */; };
 		E8AE8E1120CB2CF300BF164B /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE8E1020CB2CF300BF164B /* customCell.swift */; };
 		E8AE8E1320CB2F6000BF164B /* FileDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE8E1220CB2F6000BF164B /* FileDetailsViewController.swift */; };
+		EA922A014DF5E9493602A4F0 /* Pods_WordMatching.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EE912C384C3AF5C322BF62 /* Pods_WordMatching.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		129313D0BEA43C7C0B0AE1D1 /* Pods-WordMatching.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordMatching.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordMatching/Pods-WordMatching.debug.xcconfig"; sourceTree = "<group>"; };
+		81EE912C384C3AF5C322BF62 /* Pods_WordMatching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordMatching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C02915079A42D5F6121BB9B9 /* Pods-WordMatching.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordMatching.release.xcconfig"; path = "Pods/Target Support Files/Pods-WordMatching/Pods-WordMatching.release.xcconfig"; sourceTree = "<group>"; };
 		E8AE8DF320CB189E00BF164B /* WordMatching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordMatching.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8AE8DF620CB189E00BF164B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8AE8DF820CB189E00BF164B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,7 +33,6 @@
 		E8AE8E0220CB189F00BF164B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8AE8E0820CB1E3200BF164B /* text1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text1.txt; sourceTree = "<group>"; };
 		E8AE8E0920CB1E3200BF164B /* text2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = text2.txt; sourceTree = "<group>"; };
-		E8AE8E0C20CB1F5000BF164B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E8AE8E0E20CB2C5E00BF164B /* FileBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileBrowserViewController.swift; sourceTree = "<group>"; };
 		E8AE8E1020CB2CF300BF164B /* customCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customCell.swift; sourceTree = "<group>"; };
 		E8AE8E1220CB2F6000BF164B /* FileDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDetailsViewController.swift; sourceTree = "<group>"; };
@@ -41,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA922A014DF5E9493602A4F0 /* Pods_WordMatching.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78B53A444926E51C44D871A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81EE912C384C3AF5C322BF62 /* Pods_WordMatching.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA52EEA9A98E3AC70F59B24C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				129313D0BEA43C7C0B0AE1D1 /* Pods-WordMatching.debug.xcconfig */,
+				C02915079A42D5F6121BB9B9 /* Pods-WordMatching.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E8AE8DEA20CB189E00BF164B = {
 			isa = PBXGroup;
 			children = (
 				E8AE8DF520CB189E00BF164B /* WordMatching */,
 				E8AE8DF420CB189E00BF164B /* Products */,
+				AA52EEA9A98E3AC70F59B24C /* Pods */,
+				78B53A444926E51C44D871A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +127,6 @@
 		E8AE8E1720CB338400BF164B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E8AE8E0C20CB1F5000BF164B /* Extensions.swift */,
 				E8AE8E1420CB330800BF164B /* First controller */,
 				E8AE8E1520CB334E00BF164B /* Second controller */,
 				E8AE8E1620CB336800BF164B /* Therd controller */,
@@ -129,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8AE8E0520CB189F00BF164B /* Build configuration list for PBXNativeTarget "WordMatching" */;
 			buildPhases = (
+				B45BE77DA50469537440C673 /* [CP] Check Pods Manifest.lock */,
 				E8AE8DEF20CB189E00BF164B /* Sources */,
 				E8AE8DF020CB189E00BF164B /* Frameworks */,
 				E8AE8DF120CB189E00BF164B /* Resources */,
+				2AA4D3DBB70201FA812171C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +213,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2AA4D3DBB70201FA812171C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WordMatching/Pods-WordMatching-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Helper4Swift/Helper4Swift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Helper4Swift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WordMatching/Pods-WordMatching-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B45BE77DA50469537440C673 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WordMatching-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E8AE8DEF20CB189E00BF164B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -198,7 +260,6 @@
 				E8AE8DF920CB189E00BF164B /* ViewController.swift in Sources */,
 				E8AE8E0F20CB2C5E00BF164B /* FileBrowserViewController.swift in Sources */,
 				E8AE8E1120CB2CF300BF164B /* customCell.swift in Sources */,
-				E8AE8E0D20CB1F5000BF164B /* Extensions.swift in Sources */,
 				E8AE8DF720CB189E00BF164B /* AppDelegate.swift in Sources */,
 				E8AE8E1320CB2F6000BF164B /* FileDetailsViewController.swift in Sources */,
 			);
@@ -342,16 +403,14 @@
 		};
 		E8AE8E0620CB189F00BF164B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 129313D0BEA43C7C0B0AE1D1 /* Pods-WordMatching.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G69L3HCQBT;
 				INFOPLIST_FILE = WordMatching/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.alhaider.WordMatching;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -361,16 +420,14 @@
 		};
 		E8AE8E0720CB189F00BF164B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C02915079A42D5F6121BB9B9 /* Pods-WordMatching.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G69L3HCQBT;
 				INFOPLIST_FILE = WordMatching/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.alhaider.WordMatching;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

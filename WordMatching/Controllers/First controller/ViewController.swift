@@ -7,23 +7,27 @@
 //
 
 import UIKit
+import Helper4Swift
 import MessageUI
 
 
-var sharedFilePath: String?
 
 class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var subLabel1: UILabel!
-    
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var subLabel2: UILabel!
     
+    @IBOutlet weak var upView: UIView!
+    @IBOutlet weak var downView: UIView!
+    
     @IBOutlet weak var findButton: UIButton!
+    @IBAction func unwindToFirstController(_ sender: UIStoryboardSegue){}
     
     var sharedFilePath: String?
+    var message: String?
     
     
     override func viewDidLoad() {
@@ -37,20 +41,14 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     
-    
     //MARK: readFileFromThisProj
-    fileprivate func readFileFromThisProj(fileName: String, ofType: String) -> String {
+    static func readFileFromThisProj(fileName: String, ofType: String) -> String {
         
         let fileURLProj = Bundle.main.path(forResource: fileName, ofType: ofType)
-        var readStringProj = ""
+        let fileContents = FileManager.default.contents(atPath: fileURLProj!)
+        let fileContentsAsString = String(bytes: fileContents!, encoding: .utf8)
         
-        do {
-            readStringProj = try String(contentsOfFile: fileURLProj!, encoding: String.Encoding.utf8)
-        } catch let error as NSError {
-            print("Error : \(error)")
-        }
-        
-        return readStringProj
+        return fileContentsAsString!
     }
     
     
@@ -67,9 +65,9 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         // writing a new file ..
         let writeString = textToWrite
         do {
-            try writeString.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
+            try writeString.write(to: fileURL, atomically: true, encoding: .utf8)
         } catch let err as NSError {
-            print("Faold to write to URL: \(err)")
+            print("Failed to write to URL: \(err)")
         }
     }
     
@@ -80,12 +78,34 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         self.title = "Word Matching"
         
         label1.text = "First file text is:"
-        subLabel1.text = readFileFromThisProj(fileName: "text1", ofType: "txt")
+        subLabel1.text = ViewController.readFileFromThisProj(fileName: "text1", ofType: "txt")
         
         label2.text = "Second file text is:"
-        subLabel2.text = readFileFromThisProj(fileName: "text2", ofType: "txt")
+        subLabel2.text = ViewController.readFileFromThisProj(fileName: "text2", ofType: "txt")
         
-        findButton.addCustomization()
+        self.view.backgroundColor = .white
+        
+        upView.applyViewDesign(masksToBounds: false,
+                               color: .darkGray,
+                               cornerRadius: 15,
+                               opacity: 0.2,
+                               offSet: CGSize(width: 0, height: 0),
+                               radius: 20)
+        
+        downView.applyViewDesign(masksToBounds: false,
+                                 color: .darkGray,
+                                 cornerRadius: 15,
+                                 opacity: 0.2,
+                                 offSet: CGSize(width: 0, height: 0),
+                                 radius: 20)
+        
+        findButton.applyButtonDesign(title: "Search For Matching",
+                                     titleColor: .white,
+                                     cornerRadius: findButton.frame.size.height / 2,
+                                     backgroundColor: #colorLiteral(red: 0, green: 0.5882352941, blue: 1, alpha: 1) ,
+                                     shadowColor: .darkGray,
+                                     shadowRadius: 10,
+                                     shadowOpacity: 0.3)
     }
     
     
@@ -103,28 +123,37 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
             firstText.index(of: $0)! < firstText.index(of: $1)!
             }.reduce(""){ $0 + $1 + " "}
         
-        // creating new file ..
-        createNewTextFile(fileName: "file", fileExtension: "txt", textToWrite: result)
+        // listing the result in array to be more clear
+        let wordList =  result.components(separatedBy: .punctuationCharacters).joined().components(separatedBy: " ").filter{!$0.isEmpty}
         
-        return result
+        message = "Word List:\n\(wordList)\nNumber of words = \(wordList.count)"
+        
+        // creating new file ..
+        createNewTextFile(fileName: "file", fileExtension: "txt", textToWrite: message!)
+        
+        return message
     }
     
     
     //MARK: handelAlert
     fileprivate func handelAlert(){
         
-        let message = matchedWords(text1: readFileFromThisProj(fileName: "text1", ofType: "txt"),
-                                   text2: readFileFromThisProj(fileName: "text2", ofType: "txt"))
+        let message = matchedWords(text1: ViewController.readFileFromThisProj(fileName: "text1", ofType: "txt"),
+                                   text2: ViewController.readFileFromThisProj(fileName: "text2", ofType: "txt"))
         
-        let alert = UIAlertController(title: "Matche words", message: message, preferredStyle: .alert)
-        let dismiss = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
-        let sendByEmail = UIAlertAction(title: "Send by Email?", style: .default) { (action) in
-            self.handelEmailAttachment()
+        if (message?.isEmpty)! {
+            Helper4Swift.showBasicAlert(title: "Nothing to match!", message: nil, buttonTitle: "OK", vc: self)
+        }else{
+            let alert = UIAlertController(title: "Matched words:", message: "\(message!)", preferredStyle: .alert)
+            let dismiss = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+            let sendByEmail = UIAlertAction(title: "Create a new file and send by email?", style: .default) { (action) in
+                self.handelEmailAttachment()
+            }
+            
+            alert.addAction(dismiss)
+            alert.addAction(sendByEmail)
+            present(alert, animated: true, completion: nil)
         }
-        
-        alert.addAction(dismiss)
-        alert.addAction(sendByEmail)
-        present(alert, animated: true, completion: nil)
     }
     
     
@@ -135,21 +164,18 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             
-            
             //Attach the new file ..
             if let fileData = NSData(contentsOfFile: sharedFilePath!){
                 mail.addAttachmentData(fileData as Data, mimeType: "txt", fileName: "file")
             }
-            
             self.present(mail, animated: true, completion: nil)
             
         }else {
             // Showing failure alert
-            let sendEmaillError = UIAlertController(title: nil, message: "Could not send an Email, Please check your Mail settings in your device and try again.", preferredStyle: .alert)
-            let dismiss = UIAlertAction(title: "ok", style: .default, handler: nil)
-            
-            sendEmaillError.addAction(dismiss)
-            present(sendEmaillError, animated: true, completion: nil)
+            Helper4Swift.showBasicAlert(title: nil,
+                                        message: "Could not send an Email, Please check your Mail settings in your device and try again.",
+                                        buttonTitle: "OK",
+                                        vc: self)
         }
     }
     
@@ -159,22 +185,10 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     
-    fileprivate func openingTheFile(fileURL:String){
-        
-        
-        
-    }
-    
-    
-    
-    
-    
     
     @IBAction func findButtonTapped(_ sender: UIButton) {
         handelAlert()
     }
-    
-    
     
     
 }

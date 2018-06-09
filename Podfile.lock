@@ -1,0 +1,16 @@
+PODS:
+  - Helper4Swift (0.1.2)
+
+DEPENDENCIES:
+  - Helper4Swift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Helper4Swift
+
+SPEC CHECKSUMS:
+  Helper4Swift: 18b31cf47dec481c51725436222d064117025e8f
+
+PODFILE CHECKSUM: 9e1ef0bde26d97f8426bc6e8781a97798cc59e09
+
+COCOAPODS: 1.5.2

@@ -12,8 +12,9 @@ class FileBrowserViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let fileArray = ["text1","text2"]
+    let ext = ".txt"
     
-    let fileArray = ["text1.txt","text2.txt"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +26,17 @@ class FileBrowserViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: setup
     fileprivate func setup(){
         self.title = "All Files"
+        self.view.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 50
+        tableView.rowHeight = 65
+        tableView.backgroundColor = .white
     }
     
-        
+    //MARK: readFile
     fileprivate func readFile(fileName: String, fileExtension: String, textToWrite: String){
         
         let fileName = fileName
@@ -50,16 +54,23 @@ class FileBrowserViewController: UIViewController {
     }
     
     
-    
-    
+    //MARK: prepare
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showDetails" {
+            let desVC = segue.destination as! FileDetailsViewController
+            desVC.recivedFileName = sender as? String
+        }
+    }
     
 
 }
+
 extension FileBrowserViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        performSegue(withIdentifier: "showDetails", sender: self)
+        let fileName = fileArray[indexPath.row]
+        performSegue(withIdentifier: "showDetails", sender: fileName)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
@@ -72,8 +83,7 @@ extension FileBrowserViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! customCell
-        
-        cell.fileLabel.text = fileArray[indexPath.row]
+        cell.fileLabel.text = fileArray[indexPath.row] + ext
         return cell
     }
 }
