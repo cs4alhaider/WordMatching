@@ -128,26 +128,32 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         
         message = "Word List:\n\(wordList)\nNumber of words = \(wordList.count)"
         
-        // creating new file ..
-        createNewTextFile(fileName: "file", fileExtension: "txt", textToWrite: message!)
-        
+        if wordList.count == 0 {
+            message = "" // nothing to match
+        }else{
+            // creating new file locally ..
+            createNewTextFile(fileName: "file", fileExtension: "txt", textToWrite: message!)
+        }
         return message
     }
     
     
     //MARK: handelAlert
-    fileprivate func handelAlert(){
+    fileprivate func handleAlert(){
         
         let message = matchedWords(text1: ViewController.readFileFromThisProj(fileName: "text1", ofType: "txt"),
                                    text2: ViewController.readFileFromThisProj(fileName: "text2", ofType: "txt"))
         
         if (message?.isEmpty)! {
             Helper4Swift.showBasicAlert(title: "Nothing to match!", message: nil, buttonTitle: "OK", vc: self)
+            Helper4Swift.shakePhone(style: .error)
         }else{
+            
+            Helper4Swift.shakePhone(style: .success)
             let alert = UIAlertController(title: "Matched words:", message: "\(message!)", preferredStyle: .alert)
             let dismiss = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
             let sendByEmail = UIAlertAction(title: "Create a new file and send by email?", style: .default) { (action) in
-                self.handelEmailAttachment()
+                self.userChoice()
             }
             
             alert.addAction(dismiss)
@@ -156,9 +162,41 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         }
     }
     
+    //MARK: fileFormat
+    fileprivate enum fileFormat: String {
+        case pdf = "application/pdf"
+        case docx = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        case txt = "text/plain"
+    }
+    
+    //MARK: userChoice
+    fileprivate func userChoice(){
+        
+        let alert = UIAlertController(title: "Choose file format:", message: nil, preferredStyle: .alert)
+        let pdf = UIAlertAction(title: ".pdf", style: .default) { (action) in
+            self.handelEmailAttachment(fileFormat: .pdf)
+        }
+        
+        let docx = UIAlertAction(title: ".docx", style: .default) { (action) in
+            self.handelEmailAttachment(fileFormat: .docx)
+        }
+        
+        let txt = UIAlertAction(title: ".txt", style: .default) { (action) in
+            self.handelEmailAttachment(fileFormat: .txt)
+        }
+        let dismiss = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        
+        
+        alert.addAction(pdf)
+        alert.addAction(docx)
+        alert.addAction(txt)
+        alert.addAction(dismiss)
+        present(alert, animated: true, completion: nil)
+    }
+    
     
     //MARK: handelEmailAttachment
-    fileprivate func handelEmailAttachment() {
+    fileprivate func handelEmailAttachment(fileFormat: fileFormat) {
         
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
@@ -166,7 +204,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
             
             //Attach the new file ..
             if let fileData = NSData(contentsOfFile: sharedFilePath!){
-                mail.addAttachmentData(fileData as Data, mimeType: "txt", fileName: "file")
+                mail.addAttachmentData(fileData as Data, mimeType: fileFormat.rawValue, fileName: "File")
             }
             self.present(mail, animated: true, completion: nil)
             
@@ -185,9 +223,8 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     }
     
     
-    
     @IBAction func findButtonTapped(_ sender: UIButton) {
-        handelAlert()
+        handleAlert()
     }
     
     
