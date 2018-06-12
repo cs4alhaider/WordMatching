@@ -189,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahm-IL-nCB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2076" y="-0.44977511244377816"/>
+            <point key="canvasLocation" x="2070" y="0.0"/>
         </scene>
         <!--File Details View Controller-->
         <scene sceneID="xcR-G1-g3z">
@@ -240,7 +240,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ibt-AU-V3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="QUh-gF-wd4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2872.8000000000002" y="-0.44977511244377816"/>
+            <point key="canvasLocation" x="2866" y="0.0"/>
         </scene>
         <!--Word-->
         <scene sceneID="gWo-h7-lcF">
@@ -353,7 +353,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dlx-U2-BBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1250" y="717"/>
+            <point key="canvasLocation" x="1249" y="671"/>
+        </scene>
+        <!--Internet Usage-->
+        <scene sceneID="tth-d5-yMd">
+            <objects>
+                <viewController id="dW6-55-lM0" customClass="ThirdViewController" customModule="WordMatching" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JH2-7T-ABx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="BKx-Zy-xh0"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Internet Usage" id="nCG-gk-9De"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6rF-LU-0gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1249" y="1379"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="iwM-7q-Fru">
@@ -368,11 +384,12 @@
                     <connections>
                         <segue destination="z1W-lM-IlT" kind="relationship" relationship="viewControllers" id="YuC-2F-fnz"/>
                         <segue destination="OQB-EW-gcG" kind="relationship" relationship="viewControllers" id="fMe-pB-3un"/>
+                        <segue destination="a4E-zH-62q" kind="relationship" relationship="viewControllers" id="DDo-4d-H1s"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ke6-5i-T6K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-350" y="349"/>
+            <point key="canvasLocation" x="-748" y="803"/>
         </scene>
         <!--Widget-->
         <scene sceneID="suE-ml-WXq">
@@ -397,11 +414,37 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Unp-qr-ISx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438" y="717"/>
+            <point key="canvasLocation" x="436" y="671"/>
+        </scene>
+        <!--Internet-->
+        <scene sceneID="uiy-Uw-MfS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a4E-zH-62q" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Internet" image="internet" id="dtC-Xu-j8D"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="l1J-ki-siY">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dW6-55-lM0" kind="relationship" relationship="rootViewController" id="nSB-4E-jJb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wq4-7v-fgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="436" y="1379"/>
         </scene>
     </scenes>
     <resources>
         <image name="file" width="30" height="30"/>
+        <image name="internet" width="30" height="30"/>
         <image name="more" width="30" height="30"/>
     </resources>
 </document>

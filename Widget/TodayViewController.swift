@@ -53,8 +53,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         if let bool = groupUserDefaults?.value(forKey: roamingModeKEY) as? Bool {
             if bool == true {
                 roamingLabel.text = "Active"
+                roamingLabel.backgroundColor = .white
+                roamingLabel.textColor = #colorLiteral(red: 0.002464444107, green: 0.8679211612, blue: 0.00382380942, alpha: 1)
             }else{
                 roamingLabel.text = "Not active"
+                roamingLabel.backgroundColor = .white
+                roamingLabel.textColor = #colorLiteral(red: 0.866691783, green: 0.1296491266, blue: 0.007488029385, alpha: 1)
             }
         }
     }
