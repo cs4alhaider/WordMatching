@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E884715F20CF5D240046E863 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E884715E20CF5D240046E863 /* SecondViewController.swift */; };
+		E884716720CF5F5B0046E863 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E884716620CF5F5B0046E863 /* NotificationCenter.framework */; };
+		E884716A20CF5F5B0046E863 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E884716920CF5F5B0046E863 /* TodayViewController.swift */; };
+		E884716D20CF5F5B0046E863 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E884716B20CF5F5B0046E863 /* MainInterface.storyboard */; };
+		E884717120CF5F5B0046E863 /* Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E884716520CF5F5B0046E863 /* Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E8AE8DF720CB189E00BF164B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE8DF620CB189E00BF164B /* AppDelegate.swift */; };
 		E8AE8DF920CB189E00BF164B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AE8DF820CB189E00BF164B /* ViewController.swift */; };
 		E8AE8DFC20CB189E00BF164B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8AE8DFA20CB189E00BF164B /* Main.storyboard */; };
@@ -20,10 +25,42 @@
 		EA922A014DF5E9493602A4F0 /* Pods_WordMatching.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81EE912C384C3AF5C322BF62 /* Pods_WordMatching.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E884716F20CF5F5B0046E863 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8AE8DEB20CB189E00BF164B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E884716420CF5F5B0046E863;
+			remoteInfo = Widget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E884717520CF5F5B0046E863 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E884717120CF5F5B0046E863 /* Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		129313D0BEA43C7C0B0AE1D1 /* Pods-WordMatching.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordMatching.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordMatching/Pods-WordMatching.debug.xcconfig"; sourceTree = "<group>"; };
 		81EE912C384C3AF5C322BF62 /* Pods_WordMatching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordMatching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02915079A42D5F6121BB9B9 /* Pods-WordMatching.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordMatching.release.xcconfig"; path = "Pods/Target Support Files/Pods-WordMatching/Pods-WordMatching.release.xcconfig"; sourceTree = "<group>"; };
+		E884715E20CF5D240046E863 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		E884716520CF5F5B0046E863 /* Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E884716620CF5F5B0046E863 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		E884716920CF5F5B0046E863 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		E884716C20CF5F5B0046E863 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		E884716E20CF5F5B0046E863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E884717620CF646B0046E863 /* WordMatching.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WordMatching.entitlements; sourceTree = "<group>"; };
+		E884717720CF66650046E863 /* Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widget.entitlements; sourceTree = "<group>"; };
 		E8AE8DF320CB189E00BF164B /* WordMatching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordMatching.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8AE8DF620CB189E00BF164B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8AE8DF820CB189E00BF164B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +76,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E884716220CF5F5B0046E863 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E884716720CF5F5B0046E863 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8AE8DF020CB189E00BF164B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				81EE912C384C3AF5C322BF62 /* Pods_WordMatching.framework */,
+				E884716620CF5F5B0046E863 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -67,10 +113,40 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E884715D20CF5CF30046E863 /* Files browser */ = {
+			isa = PBXGroup;
+			children = (
+				E8AE8E0E20CB2C5E00BF164B /* FileBrowserViewController.swift */,
+				E8AE8E1020CB2CF300BF164B /* customCell.swift */,
+				E884716020CF5D3D0046E863 /* Files details */,
+			);
+			path = "Files browser";
+			sourceTree = "<group>";
+		};
+		E884716020CF5D3D0046E863 /* Files details */ = {
+			isa = PBXGroup;
+			children = (
+				E8AE8E1220CB2F6000BF164B /* FileDetailsViewController.swift */,
+			);
+			path = "Files details";
+			sourceTree = "<group>";
+		};
+		E884716820CF5F5B0046E863 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				E884717720CF66650046E863 /* Widget.entitlements */,
+				E884716920CF5F5B0046E863 /* TodayViewController.swift */,
+				E884716B20CF5F5B0046E863 /* MainInterface.storyboard */,
+				E884716E20CF5F5B0046E863 /* Info.plist */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 		E8AE8DEA20CB189E00BF164B = {
 			isa = PBXGroup;
 			children = (
 				E8AE8DF520CB189E00BF164B /* WordMatching */,
+				E884716820CF5F5B0046E863 /* Widget */,
 				E8AE8DF420CB189E00BF164B /* Products */,
 				AA52EEA9A98E3AC70F59B24C /* Pods */,
 				78B53A444926E51C44D871A1 /* Frameworks */,
@@ -81,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				E8AE8DF320CB189E00BF164B /* WordMatching.app */,
+				E884716520CF5F5B0046E863 /* Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +165,7 @@
 		E8AE8DF520CB189E00BF164B /* WordMatching */ = {
 			isa = PBXGroup;
 			children = (
+				E884717620CF646B0046E863 /* WordMatching.entitlements */,
 				E8AE8E0820CB1E3200BF164B /* text1.txt */,
 				E8AE8E0920CB1E3200BF164B /* text2.txt */,
 				E8AE8DF620CB189E00BF164B /* AppDelegate.swift */,
@@ -103,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				E8AE8DF820CB189E00BF164B /* ViewController.swift */,
+				E884715D20CF5CF30046E863 /* Files browser */,
 			);
 			path = "First controller";
 			sourceTree = "<group>";
@@ -110,18 +189,9 @@
 		E8AE8E1520CB334E00BF164B /* Second controller */ = {
 			isa = PBXGroup;
 			children = (
-				E8AE8E0E20CB2C5E00BF164B /* FileBrowserViewController.swift */,
-				E8AE8E1020CB2CF300BF164B /* customCell.swift */,
+				E884715E20CF5D240046E863 /* SecondViewController.swift */,
 			);
 			path = "Second controller";
-			sourceTree = "<group>";
-		};
-		E8AE8E1620CB336800BF164B /* Therd controller */ = {
-			isa = PBXGroup;
-			children = (
-				E8AE8E1220CB2F6000BF164B /* FileDetailsViewController.swift */,
-			);
-			path = "Therd controller";
 			sourceTree = "<group>";
 		};
 		E8AE8E1720CB338400BF164B /* Controllers */ = {
@@ -129,7 +199,6 @@
 			children = (
 				E8AE8E1420CB330800BF164B /* First controller */,
 				E8AE8E1520CB334E00BF164B /* Second controller */,
-				E8AE8E1620CB336800BF164B /* Therd controller */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -146,6 +215,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E884716420CF5F5B0046E863 /* Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E884717220CF5F5B0046E863 /* Build configuration list for PBXNativeTarget "Widget" */;
+			buildPhases = (
+				E884716120CF5F5B0046E863 /* Sources */,
+				E884716220CF5F5B0046E863 /* Frameworks */,
+				E884716320CF5F5B0046E863 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Widget;
+			productName = Widget;
+			productReference = E884716520CF5F5B0046E863 /* Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		E8AE8DF220CB189E00BF164B /* WordMatching */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8AE8E0520CB189F00BF164B /* Build configuration list for PBXNativeTarget "WordMatching" */;
@@ -155,10 +241,12 @@
 				E8AE8DF020CB189E00BF164B /* Frameworks */,
 				E8AE8DF120CB189E00BF164B /* Resources */,
 				2AA4D3DBB70201FA812171C9 /* [CP] Embed Pods Frameworks */,
+				E884717520CF5F5B0046E863 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E884717020CF5F5B0046E863 /* PBXTargetDependency */,
 			);
 			name = WordMatching;
 			productName = WordMatching;
@@ -175,8 +263,21 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Abdullah Alhaider";
 				TargetAttributes = {
+					E884716420CF5F5B0046E863 = {
+						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					E8AE8DF220CB189E00BF164B = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -194,11 +295,20 @@
 			projectRoot = "";
 			targets = (
 				E8AE8DF220CB189E00BF164B /* WordMatching */,
+				E884716420CF5F5B0046E863 /* Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E884716320CF5F5B0046E863 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E884716D20CF5F5B0046E863 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8AE8DF120CB189E00BF164B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,10 +363,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E884716120CF5F5B0046E863 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E884716A20CF5F5B0046E863 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E8AE8DEF20CB189E00BF164B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E884715F20CF5D240046E863 /* SecondViewController.swift in Sources */,
 				E8AE8DF920CB189E00BF164B /* ViewController.swift in Sources */,
 				E8AE8E0F20CB2C5E00BF164B /* FileBrowserViewController.swift in Sources */,
 				E8AE8E1120CB2CF300BF164B /* customCell.swift in Sources */,
@@ -267,7 +386,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E884717020CF5F5B0046E863 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E884716420CF5F5B0046E863 /* Widget */;
+			targetProxy = E884716F20CF5F5B0046E863 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		E884716B20CF5F5B0046E863 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E884716C20CF5F5B0046E863 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		E8AE8DFA20CB189E00BF164B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,6 +422,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E884717320CF5F5B0046E863 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G69L3HCQBT;
+				INFOPLIST_FILE = Widget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.alhaider.WordMatching.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E884717420CF5F5B0046E863 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G69L3HCQBT;
+				INFOPLIST_FILE = Widget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.alhaider.WordMatching.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		E8AE8E0320CB189F00BF164B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -338,7 +515,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -392,7 +569,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -405,12 +582,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 129313D0BEA43C7C0B0AE1D1 /* Pods-WordMatching.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WordMatching/WordMatching.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G69L3HCQBT;
 				INFOPLIST_FILE = WordMatching/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.alhaider.WordMatching;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -422,12 +604,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C02915079A42D5F6121BB9B9 /* Pods-WordMatching.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WordMatching/WordMatching.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G69L3HCQBT;
 				INFOPLIST_FILE = WordMatching/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.alhaider.WordMatching;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -438,6 +625,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E884717220CF5F5B0046E863 /* Build configuration list for PBXNativeTarget "Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E884717320CF5F5B0046E863 /* Debug */,
+				E884717420CF5F5B0046E863 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E8AE8DEE20CB189E00BF164B /* Build configuration list for PBXProject "WordMatching" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
