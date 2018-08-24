@@ -11,25 +11,21 @@ import Helper4Swift
 import MessageUI
 
 
-
 class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
-    
     
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var subLabel1: UILabel!
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var subLabel2: UILabel!
-    
     @IBOutlet weak var upView: UIView!
     @IBOutlet weak var downView: UIView!
-    
     @IBOutlet weak var findButton: UIButton!
     @IBAction func unwindToFirstController(_ sender: UIStoryboardSegue){}
     
     var sharedFilePath: String?
     var message: String?
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -40,7 +36,6 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    
     //MARK: readFileFromThisProj
     static func readFileFromThisProj(fileName: String, ofType: String) -> String {
         
@@ -50,7 +45,6 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         
         return fileContentsAsString!
     }
-    
     
     //MARK: createAndReadNewTextFile
     fileprivate func createNewTextFile(fileName: String, fileExtension: String, textToWrite: String){
@@ -71,18 +65,14 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         }
     }
     
-    
     //MARK: setup
     fileprivate func setup(){
         
         self.title = "Word Matching"
-        
         label1.text = "First file text is:"
         subLabel1.text = ViewController.readFileFromThisProj(fileName: "text1", ofType: "txt")
-        
         label2.text = "Second file text is:"
         subLabel2.text = ViewController.readFileFromThisProj(fileName: "text2", ofType: "txt")
-        
         self.view.backgroundColor = .white
         
         upView.applyViewDesign(masksToBounds: false,
@@ -107,7 +97,6 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
                                      shadowRadius: 10,
                                      shadowOpacity: 0.3)
     }
-    
     
     //MARK: matchedWords
     func matchedWords(text1:String, text2:String) -> String?{
@@ -136,7 +125,6 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         }
         return message
     }
-    
     
     //MARK: handelAlert
     fileprivate func handleAlert(){
@@ -194,7 +182,6 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         present(alert, animated: true, completion: nil)
     }
     
-    
     //MARK: handelEmailAttachment
     fileprivate func handelEmailAttachment(fileFormat: fileFormat) {
         
@@ -222,11 +209,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         controller.dismiss(animated: true, completion: nil)
     }
     
-    
     @IBAction func findButtonTapped(_ sender: UIButton) {
         handleAlert()
     }
-    
-    
 }
-

@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    
     fileprivate func registerValues(){
         let groupUserDefaults = UserDefaults.init(suiteName: "group.net.alhaider.WordMatching.widget")
         let nextBillKEY = "nextBillKEY"
@@ -28,7 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         groupUserDefaults?.register(defaults: [nextBillKEY : "Add any date"])
         groupUserDefaults?.register(defaults: [roamingModeKEY : true])
     }
-    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

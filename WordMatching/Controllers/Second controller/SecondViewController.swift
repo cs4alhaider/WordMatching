@@ -14,13 +14,10 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var label1: UILabel!
     @IBOutlet weak var textField1: UITextField!
     @IBOutlet weak var button1: UIButton!
-    
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var roamingSwitch: UISwitch!
     
-    
     let groupUserDefaults = UserDefaults.init(suiteName: "group.net.alhaider.WordMatching.widget")
-    
     let nextBillKEY = "nextBillKEY"
     let roamingModeKEY = "roamingModeKEY"
     
@@ -41,20 +38,16 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
     @IBAction func button1Tapped(_ sender: UIButton) {
         nextBillSetup()
     }
-    
     
     @IBAction func roamingSwitchTapped(_ sender: UISwitch) {
         groupUserDefaults?.set(roamingSwitch.isOn, forKey: roamingModeKEY)
     }
     
-    
     //MARK: nextBillSetup
     fileprivate func nextBillSetup(){
-        
         if textField1.hasText {
             label1.text = textField1.text
             // assigning textField1.text value to our app group to access it from our new Today Extension (Widget)
@@ -64,7 +57,6 @@ class SecondViewController: UIViewController {
         }
     }
     
-    
     //MARK: roamingMode
     fileprivate func roamingMode(){
         // grabbing the value of roamingSwitch
@@ -73,10 +65,8 @@ class SecondViewController: UIViewController {
         }
     }
     
-    
     //MARK: setup
     fileprivate func setup(){
-        
         // grabbing the value of nextBillKEY to update the label1
         if let textToUse = groupUserDefaults?.value(forKey: nextBillKEY) as? String {
             label1.text = textToUse
@@ -91,7 +81,6 @@ class SecondViewController: UIViewController {
                                      shadowRadius: 10,
                                      shadowOpacity: 0.3)
     }
-    
     
     //MARK: toolBar
     fileprivate func toolBar(){
@@ -126,5 +115,4 @@ class SecondViewController: UIViewController {
     @objc private func dismissKeyboard() {
         view.endEditing(true)
     }
-    
 }

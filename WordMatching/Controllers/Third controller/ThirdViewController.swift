@@ -10,10 +10,8 @@ import UIKit
 
 class ThirdViewController: UIViewController {
     
-    
     var shapeLayer: CAShapeLayer!
     var pulsatingLayer: CAShapeLayer!
-    
     
     let internetLabel: UILabel = {
         let label = UILabel()
@@ -24,7 +22,6 @@ class ThirdViewController: UIViewController {
         label.font = UIFont.boldSystemFont(ofSize: 22)
         return label
     }()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +34,11 @@ class ThirdViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
     //MARK: createCircleShapeLayer
     fileprivate func createCircleShapeLayer(strokeColor: UIColor, fillColor: UIColor, lineWidth: CGFloat) -> CAShapeLayer {
         // creating my track layer
         let layer = CAShapeLayer()
-        // i need two pi (1 pi = 180 >> have a cercal) to get complete cercal to draw too the endAngle ..
+        // i need two pi (1 pi = 180 >> half a cercal) to get complete cercal to draw too the endAngle ..
         let circularPath = UIBezierPath(arcCenter: .zero, radius: 100, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         layer.path = circularPath.cgPath
         layer.strokeColor = strokeColor.cgColor
@@ -54,10 +50,8 @@ class ThirdViewController: UIViewController {
         return layer
     }
     
-    
     //MARK: trackInternetUsage
     fileprivate func trackInternetUsage() {
-        
         self.view.backgroundColor = .white
         //
         pulsatingLayer = createCircleShapeLayer(strokeColor: .clear, fillColor: #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 0.5), lineWidth: 25)
@@ -77,7 +71,6 @@ class ThirdViewController: UIViewController {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.handleTap)))
     }
     
-    
     //MARK: handleTap
     @objc fileprivate func handleTap() {
         print("Attempting to animate")
@@ -89,7 +82,6 @@ class ThirdViewController: UIViewController {
         shapeLayer.add(basicAnimation, forKey: "someBasicAnimation")
         animatePulsatingLayer()
     }
-    
     
     //MARK: animatePulsatingLayer
     fileprivate func animatePulsatingLayer() {
@@ -109,6 +101,4 @@ class ThirdViewController: UIViewController {
         internetLabel.center = view.center
     }
     
-    
 }
-

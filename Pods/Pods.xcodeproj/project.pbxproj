@@ -10,18 +10,18 @@
 		02626FCCB69A38566513F06F1A1D726A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC89CEFBB0F50649C5F13F0EC3D7F87 /* String+Extension.swift */; };
 		13977847B04D7CA8DE09E8E0BB8C7C76 /* Helper4Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CD855F6A8B2A8DA66E0FB8599AC4E0C /* Helper4Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		20A83BAA3923A2F839CF8F2879031223 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95108E1908FB4F54268193FD35E023D /* UIButton+Extension.swift */; };
-		244A0D901F3811AB01A89E394E6BACF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		3F4B55D300B3EA3711D2D6BDAC617376 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720002F66D8457ABE989CD6803A78F9F /* UIColor+Extension.swift */; };
+		43D14A828E451D6BBC1AA1C09DBB02E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		5460DC4CFC3344FFB1058C8DC7F1C404 /* Pods-WordMatching-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F06A41D47F29727EAD1A7CB85F70585 /* Pods-WordMatching-dummy.m */; };
+		675EC8FBE272885ECF9EC19A8310CB90 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
 		6E32FDD9FE9C6C6F60CED77B4C70C3F5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478E36894B067EDF49C3B1BB1F72F1 /* UIView+Extension.swift */; };
 		6EE67CEF3D3B1CD5901259C42B179477 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBAFD360EF738E32A199C7989C4DF91 /* UIImageView+Extension.swift */; };
+		93813453FB12A5BB918B6F76B72746AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		AD8A43D7BDD2C75E3622C46B79142331 /* Helper4Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5168888C6FF0AAE6148F258BEA7A62 /* Helper4Swift-dummy.m */; };
 		ADCADA36E6BC3BE04504B496D81BC6F1 /* Pods-WordMatching-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 49DE7A26AC977B96A103BBCBC81CF9F1 /* Pods-WordMatching-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6EFDC90EA6BA57755B5014A1171E262 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9755600F60C41C52A1F3A55BF777717E /* UITextField+Extension.swift */; };
-		CC88CFDB1DF3165BDEFA4E89CEA60990 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
 		D70B347B8307887F6D221533710ABFBD /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F243DDA64E9CEF750419768B0A3D393 /* UIDevice+Extension.swift */; };
 		F181B5358BF402F0150906B06AEE9099 /* Helper4Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA64D9406E8881B11F70B3BA66554F /* Helper4Swift.swift */; };
-		FB9B93AEFFB0B3EA152FE6A42EDF800C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,15 +50,15 @@
 		74170294916B64F5C6001E6E5DDD8DF4 /* Helper4Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Helper4Swift.modulemap; sourceTree = "<group>"; };
 		8F06A41D47F29727EAD1A7CB85F70585 /* Pods-WordMatching-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WordMatching-dummy.m"; sourceTree = "<group>"; };
 		90249D0E6B5C2549D25B665BAD9C7CB5 /* Pods-WordMatching.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WordMatching.modulemap"; sourceTree = "<group>"; };
+		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		92DD560DF18472DE3302AE4FE9E3370D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9755600F60C41C52A1F3A55BF777717E /* UITextField+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Extension.swift"; path = "Helper4Swift/Classes/Extensions/UITextField+Extension.swift"; sourceTree = "<group>"; };
 		9D842C301E2DE2B54A593A257B430F89 /* Helper4Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Helper4Swift.xcconfig; sourceTree = "<group>"; };
-		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		CDCCD62B76E704BA577F17A575646FA5 /* Pods-WordMatching-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WordMatching-acknowledgements.plist"; sourceTree = "<group>"; };
 		CF478E36894B067EDF49C3B1BB1F72F1 /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Helper4Swift/Classes/Extensions/UIView+Extension.swift"; sourceTree = "<group>"; };
 		D2CA64D9406E8881B11F70B3BA66554F /* Helper4Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helper4Swift.swift; path = Helper4Swift/Classes/Classes/Helper4Swift.swift; sourceTree = "<group>"; };
-		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D95108E1908FB4F54268193FD35E023D /* UIButton+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Extension.swift"; path = "Helper4Swift/Classes/Extensions/UIButton+Extension.swift"; sourceTree = "<group>"; };
 		E39D6F96FB8D3D5DBEFB6B956DDE0676 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8F0462ED5F3670C1DA27C770CCAC05D /* Helper4Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Helper4Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB9B93AEFFB0B3EA152FE6A42EDF800C /* Foundation.framework in Frameworks */,
+				43D14A828E451D6BBC1AA1C09DBB02E5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,14 +79,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				244A0D901F3811AB01A89E394E6BACF0 /* Foundation.framework in Frameworks */,
-				CC88CFDB1DF3165BDEFA4E89CEA60990 /* UIKit.framework in Frameworks */,
+				93813453FB12A5BB918B6F76B72746AC /* Foundation.framework in Frameworks */,
+				675EC8FBE272885ECF9EC19A8310CB90 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				908E902E026C5C22904CF9014A5604AD /* Foundation.framework */,
+				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		11B2C28FC8E21D9187A95E731B90DD4C /* Pods-WordMatching */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,18 +125,9 @@
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
-				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 		6A0C7D2A98A4E3BDDD59E0FFB3769DAC /* Products */ = {
